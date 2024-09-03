@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z+ PASSWORDS By MH♥</title>
+    <style>
+
+        /* Header Section Styles */
+        .top-right-buttons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .top-right-buttons a {
+            font-family: 'Anonymous Pro', monospace;
+            margin: 5px;
+            padding: 8px 15px;
+            border-radius: 12px;
+            font-size: 16px;
+            color: #00ff00;
+            text-decoration: none;
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 2px solid #00ff00;
+        }
+
+        /* Importing Hacker Font for Headings */
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        /* Importing a similar but more readable font for body text */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap');
+
+        body {
+            font-family: 'Roboto Mono', monospace;
+            background-image: url('https://imgs.search.brave.com/OdKhktbl4ZkWYbu9WXztMczbQ0qiqR7Nl5FiwPgdcxU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTU1/MzYxODU1L3Bob3Rv/L2xvY2suanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPWNzUEpD/TVZhRkpmWXlkcmRm/ZTh0QXBmdjM1SGcz/eUExbmpXN3l2YUtv/Znc9'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            color: #00ff00;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.7);
+            width: 400px;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: 'Press Start 2P', cursive; /* Hacker font for headings */
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 40px);
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #00ff00;
+            background-color: black;
+            color: #00ff00;
+            font-size: 12px;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 10px 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+            color: black;
+            background-color: #00ff00;
+        }
+
+        .copy-icon {
+            cursor: pointer;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+        <!-- Header Section -->
+    <div class="top-right-buttons">
+        <a href="welcome.html">Home</a>
+        <a href="#">Contact</a>
+        <a href="#">About Us</a>
+    </div>
+    
+    <div class="container">
+        <h2>Strong Password Generator</h2>
+        <button onclick="generatePassword()">Generate Password</button>
+        <input type="text" id="generatedPassword" readonly>
+        <img src="https://img.icons8.com/material-outlined/24/00ff00/copy.png" class="copy-icon" onclick="copyPassword()" title="Copy Password" alt="Copy Icon">
+        <div id="message" class="message"></div>
+    </div>
+
+    <script>
+        function generatePassword() {
+            const length = 16;
+            const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+[]{}|;:,.<>?";
+            let password = "";
+
+            for (let i = 0; i < length; i++) {
+                const randomIndex = Math.floor(Math.random() * charset.length);
+                password += charset[randomIndex];
+            }
+
+            document.getElementById('generatedPassword').value = password;
+            document.getElementById('message').innerHTML = 'A strong password has been generated!';
+        }
+
+        function copyPassword() {
+            const generatedPassword = document.getElementById('generatedPassword');
+            generatedPassword.select();
+            document.execCommand('copy');
+            alert('Password copied to clipboard!');
+        }
+    </script>
+</body>
+
+</html>

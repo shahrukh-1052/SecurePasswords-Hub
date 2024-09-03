@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z+ PASSWORDS By MH♥</title>
+    <style>
+
+        /* Header Section Styles */
+        .top-right-buttons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .top-right-buttons a {
+            font-family: 'Anonymous Pro', monospace;
+            margin: 5px;
+            padding: 8px 15px;
+            border-radius: 12px;
+            font-size: 16px;
+            color: #00ff00;
+            text-decoration: none;
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 2px solid #00ff00;
+        }
+
+        /* Importing Hacker Font */
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+        body {
+            font-family: 'Press Start 2P', cursive; /* Hacker-style font */
+            background-image: url('https://imgs.search.brave.com/fxh6eovnNOxf5QbrQgqhOpjtEJE0Dy72LqSqhGRADWc/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNjQ3/MjczMzcyL3ZlY3Rv/ci9nbG9iYWwtbmV0/d29yay1zZWN1cml0/eS12ZWN0b3IuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPWxT/SkpaWTRZZVQ0dk9j/NzQ0SG93TGx1WUx5/TzhYd1VzcnlhdnFO/Wm5CVjg9'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            color: #00ff00;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.7);
+            width: 350px;
+            text-align: center;
+        }
+
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #00ff00;
+            background-color: black;
+            color: #00ff00;
+            font-size: 12px;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 10px 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+            color: black;
+        }
+
+        button.clear {
+            background-color: #ff0040;
+        }
+
+        button.check {
+            background-color: #00ff00;
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .message.strong {
+            color: #00ff00;
+            animation: floatMessage 1s ease-in-out;
+        }
+
+        .message.weak {
+            color: #ff0040;
+            animation: floatMessage 1s ease-in-out;
+        }
+
+        @keyframes floatMessage {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .links {
+            margin-top: 10px;
+            display: none;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .links a {
+            display: block;
+            margin: 5px 0;
+            color: #00ff00;
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+        <!-- Header Section -->
+    <div class="top-right-buttons">
+        <a href="welcome.html">Home</a>
+        <a href="#">Contact</a>
+        <a href="#">About Us</a>
+    </div>
+    
+    <div class="container">
+        <h2>Create your own Password</h2>
+        <input type="password" id="passwordInput" placeholder="Enter your password">
+        <div>
+            <button class="clear" onclick="clearPassword()">Clear</button>
+            <button class="check" onclick="checkPassword()">Check</button>
+        </div>
+        <div id="message" class="message"></div>
+        <div id="links" class="links">
+            <a href="instruct.html">Instructions for Password Generation</a>
+            <a href="generate.html">Generate a Strong Password</a>
+        </div>
+    </div>
+
+    <script>
+        function clearPassword() {
+            document.getElementById('passwordInput').value = '';
+            document.getElementById('message').innerHTML = '';
+            document.getElementById('links').style.display = 'none';
+        }
+
+        function checkPassword() {
+            const password = document.getElementById('passwordInput').value;
+            const messageDiv = document.getElementById('message');
+            const linksDiv = document.getElementById('links');
+
+            const strongPasswordCriteria = [
+                /.{12,}/,
+                /[A-Z]/,
+                /[a-z]/,
+                /[0-9]/,
+                /[!@#\$%\^&\*\(\)_\+\-=\[\]\{\};':"\\|,.<>\/?]+/
+            ];
+
+            const isStrongPassword = strongPasswordCriteria.every((regex) => regex.test(password));
+
+            if (isStrongPassword) {
+                messageDiv.innerHTML = 'Your password is strong!';
+                messageDiv.className = 'message strong';
+                linksDiv.style.display = 'none';
+            } else {
+                messageDiv.innerHTML = 'Password not Strong enough.';
+                messageDiv.className = 'message weak';
+                linksDiv.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+
+</html>

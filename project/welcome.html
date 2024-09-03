@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z+ PASSWORDS By MH♥</title>
+
+<link rel="icon" href="D:\project-01\images\favicon.ico" type="image/x-icon">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Anonymous+Pro&display=swap');
+
+        /* Header Section Styles */
+        .top-right-buttons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .top-right-buttons a {
+            font-family: 'Anonymous Pro', monospace;
+            margin: 5px;
+            padding: 8px 15px;
+            border-radius: 12px;
+            font-size: 16px;
+            color: #00ff00;
+            text-decoration: none;
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 2px solid #00ff00;
+        }
+
+        /* Footer Section Styles */
+        .footer {
+            position: fixed; /* Change to fixed so it sticks to the bottom */
+            bottom: 0; /* Attach to the bottom of the viewport */
+            left: 0;
+            width: 100%;
+            background-color: white; /* Background color for the footer */
+            color: black; /* Text color */
+            text-align: center; /* Center align text */
+            font-family: 'Anonymous Pro', monospace; /* Font family */
+            padding: 5px 0; /* Reduced padding for a smaller footer */
+            border-radius: 10px; /* Curved corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: slight shadow for better visibility */
+        }
+
+        .footer a {
+            color: black; /* Black color for links */
+            text-decoration: none; /* Removed underline from links */
+            border: none; /* Removed any border */
+            background: none; /* Removed any background */
+            transition: color 0.3s ease; /* Smooth color transition */
+        }
+
+       
+
+        /* Body Section Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Anonymous Pro', monospace;
+            background: url('https://imgs.search.brave.com/8rE2vU5-Vhtttg94HEb90Iwyaph1vqghB5h85u8SL1c/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9zZWN1cmluZy1k/aWdpdGFsLWFzc2V0/cy1jeWJlcnNlY3Vy/aXR5LWRhdGEtcHJv/dGVjdGlvbl8xMDM2/OTc1LTIwODUwMS5q/cGc') no-repeat center center fixed;
+            background-size: cover;
+            color: #00ff00;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            position: relative;
+            animation: fadeIn 2s ease-in-out;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        h1 {
+            font-size: 32px;
+            text-shadow: 0 0 10px #FF7F50, 0 0 20px #00ff00;
+            animation: blink 1.5s infinite, typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid #FF7F50;
+        }
+
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink-caret {
+            from, to {
+                border-color: transparent;
+            }
+            50% {
+                border-color: #FF7F50;
+            }
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 25px 0;
+            font-size: 20px;
+            animation: slideIn 2s ease;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        li:hover {
+            transform: scale(1.1);
+            color: #FF4500;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        a {
+            color: #00ff00;
+            text-decoration: none;
+            font-size: 22px;
+            display: inline-block;
+            position: relative;
+            padding: 12px 25px;
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.5);
+            animation: bounceIn 1s ease-in-out;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+
+        a:hover {
+            color: #000;
+            background-color: #00ff00;
+        }
+
+        @keyframes bounceIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="top-right-buttons">
+        <a href="welcome.html">Home</a>
+<a href="mailto:tufgamerz56@gmail.com">Contact</a>
+        <a href="about.html">About Us</a>
+    </div>
+
+    <!-- Body Section -->
+    <div>
+        <h1>WELCOME TO Z+ PASSWORDS MANAGER</h1>
+        <ul>
+            <li><a href="instruct.html">Instructions for Password Generation</a></li>
+            <li><a href="check.html">Check Your Password Strength</a></li>
+            <li><a href="generate.html">Generate a Strong Password</a></li>
+            <li><a href="create.html">Create Your Own Strong Password</a></li>
+        </ul>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>
+            &copy; 2024 Made with ♥ by <a href="https://github.com/shahrukh-1052">HABEEBUDDIN</a>
+        </p>
+    </div>
+</body>
+</html>
